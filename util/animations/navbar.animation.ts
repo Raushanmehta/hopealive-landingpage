@@ -32,17 +32,16 @@ export function animateNavbarEntrance(
     );
   }
 
-  // Logo icon rotation animation
+  // Logo icon scale entrance (no rotation)
   if (logoIcon) {
     tl.fromTo(
       logoIcon,
-      { rotation: -90, scale: 0.6, opacity: 0 },
+      { scale: 0.8, opacity: 0 },
       {
-        rotation: 0,
         scale: 1,
         opacity: 1,
         duration: 0.5,
-        ease: "back.out(1.7)",
+        ease: "power2.out",
         immediateRender: false,
         clearProps: "opacity,transform",
       },
@@ -107,13 +106,15 @@ export function animateNavbarEntrance(
   return tl;
 }
 
-// Logo spin hover interaction
+// Logo hover interaction (no rotation)
 export function animateLogoHover(logoIcon: HTMLElement | null) {
   if (!logoIcon) return;
   return gsap.to(logoIcon, {
-    rotation: "+=90",
-    duration: 0.6,
+    scale: 1.08,
+    duration: 0.3,
     ease: "power2.out",
+    yoyo: true,
+    repeat: 1,
   });
 }
 
