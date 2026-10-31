@@ -118,7 +118,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
       <nav
         ref={navContainerRef}
         aria-label="Main Navigation"
-        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#1f2c16] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#365314] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
       >
         <div
           ref={innerContainerRef}
@@ -128,7 +128,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
           <Link
             href={data.brand.href}
             onMouseEnter={handleLogoMouseEnter}
-            className="flex items-center gap-2.5 group select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#feff02] rounded-lg shrink-0"
+            className="flex items-center gap-2.5 group select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ea580c] rounded-lg shrink-0"
           >
             <span
               ref={logoIconRef}
@@ -136,7 +136,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
             >
               <BrandLogoIcon
                 size={34}
-                color="#feff02"
+                color="#ea580c"
                 className="drop-shadow-[0_0_10px_rgba(254,255,2,0.6)]"
               />
             </span>
@@ -166,8 +166,8 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
                 <Link
                   key={link.id}
                   href={link.href}
-                  className={`nav-link-item relative py-1 text-xs lg:text-[13px] font-poppins font-medium tracking-[0.08em] uppercase transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#feff02] rounded-sm ${isActive
-                    ? "text-[#feff02] font-semibold"
+                  className={`nav-link-item relative py-1 text-xs lg:text-[13px] font-poppins font-medium tracking-[0.08em] uppercase transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#ea580c] rounded-sm ${isActive
+                    ? "text-[#ea580c] font-semibold"
                     : "text-[#f0f4ee]/90 hover:text-white"
                     }`}
                 >
@@ -186,7 +186,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
               onClick={() => openModal("Donate to HopeAlive", "Your donation directly helps vulnerable children, nutrition programs, and safe housing.")}
               onMouseEnter={handleButtonMouseEnter}
               onMouseLeave={handleButtonMouseLeave}
-              className="btn-leaf relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#feff02] text-black font-poppins font-medium sm:font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:bg-[#f5f600] active:scale-[0.98] transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#feff02] cursor-pointer shrink-0 select-none"
+              className="btn-leaf relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#ea580c] text-white font-poppins font-medium sm:font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:bg-[#c2410c] active:scale-[0.98] transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#ea580c] cursor-pointer shrink-0 select-none"
             >
               <span>{data.cta.label}</span>
               <ArrowUpRight
@@ -203,7 +203,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-[#feff02] hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#feff02]"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-[#ea580c] hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ea580c]"
             >
               {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -215,7 +215,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="pointer-events-auto md:hidden w-[calc(100%-24px)] max-w-6xl mt-2 p-5 rounded-2xl bg-[#1f2c16]/95 border border-white/10 backdrop-blur-xl shadow-2xl space-y-4"
+          className="pointer-events-auto md:hidden w-[calc(100%-24px)] max-w-6xl mt-2 p-5 rounded-2xl bg-[#365314]/95 border border-white/10 backdrop-blur-xl shadow-2xl space-y-4"
         >
           <div className="flex flex-col space-y-3">
             {data.links.map((link: NavItem) => {
@@ -226,7 +226,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`mobile-nav-item py-2 px-3 rounded-lg text-sm font-poppins font-medium tracking-wider uppercase transition-colors ${isActive
-                    ? "bg-white/10 text-[#feff02] font-semibold"
+                    ? "bg-white/10 text-[#ea580c] font-semibold"
                     : "text-[#f0f4ee]/90 hover:bg-white/5 hover:text-white"
                     }`}
                 >
@@ -243,7 +243,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
                 setMobileMenuOpen(false);
                 openModal("Donate to HopeAlive", "Your donation directly helps vulnerable children, nutrition programs, and safe housing.");
               }}
-              className="btn-leaf w-full flex items-center justify-center gap-2 py-3 bg-[#feff02] text-black font-poppins font-semibold text-sm tracking-wide shadow-md hover:bg-[#f5f600] cursor-pointer"
+              className="btn-leaf w-full flex items-center justify-center gap-2 py-3 bg-[#ea580c] text-white font-poppins font-semibold text-sm tracking-wide shadow-md hover:bg-[#c2410c] cursor-pointer"
             >
               <span>{data.cta.label}</span>
               <ArrowUpRight size={16} strokeWidth={2.6} />
@@ -260,7 +260,7 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
     <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none flex flex-col items-center w-full">
       <nav
         aria-label="Main Navigation"
-        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#1f2c16] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#365314] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
       >
         <div className="w-full max-w-7xl mx-auto flex items-center justify-between py-2.5 sm:py-2.5">
           {/* Brand logo navigation link */}
@@ -271,7 +271,7 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
             <span className="inline-flex items-center justify-center shrink-0">
               <SunburstIcon
                 size={34}
-                color="#feff02"
+                color="#ea580c"
                 className="drop-shadow-[0_0_10px_rgba(254,255,2,0.6)]"
               />
             </span>
@@ -302,7 +302,7 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
 
           {/* Call to action button */}
           <div className="flex items-center gap-3 shrink-0">
-            <div className="btn-leaf relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#feff02] text-black font-poppins font-medium sm:font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:bg-[#f5f600] transition-all duration-200 shrink-0 select-none cursor-pointer">
+            <div className="btn-leaf relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#ea580c] text-white font-poppins font-medium sm:font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:bg-[#c2410c] transition-all duration-200 shrink-0 select-none cursor-pointer">
               <span>{data.cta.label}</span>
               <ArrowUpRight
                 size={16}
@@ -314,7 +314,7 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
             <button
               type="button"
               aria-label="Open menu"
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-[#feff02]"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-[#ea580c]"
             >
               <Menu size={22} />
             </button>

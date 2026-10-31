@@ -9,7 +9,7 @@ interface SunburstIconProps extends React.SVGProps<SVGSVGElement> {
 export default function SunburstIcon({
   size = 32,
   className = "",
-  color = "#feff02",
+  color = "#ea580c",
   ...props
 }: SunburstIconProps) {
   // Radial rays angle array

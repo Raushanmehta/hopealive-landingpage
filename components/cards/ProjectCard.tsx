@@ -40,7 +40,7 @@ export default function ProjectCard({
         <svg
           viewBox="0 0 340 500"
           preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full -z-10 text-[#162211] overflow-visible"
+          className="absolute inset-0 w-full h-full -z-10 text-[#273813] overflow-visible"
         >
           {/* Silhouette leaf curve path */}
           <path
@@ -56,7 +56,7 @@ export default function ProjectCard({
           />
           <path
             d="M 0 210 L 340 185 L 340 265 L 0 290 Z"
-            fill="#feff02"
+            fill="#ea580c"
             opacity="0.08"
           />
           <path
@@ -68,11 +68,11 @@ export default function ProjectCard({
 
         {/* Project title and subtitle */}
         <div className="text-center pt-2 sm:pt-3 px-6 sm:px-7 lg:px-8">
-          <h3 className="font-poppins font-bold text-2xl sm:text-3xl lg:text-[34px] tracking-tight text-white group-hover:text-[#feff02] transition-colors duration-300 leading-tight">
+          <h3 className="font-poppins font-bold text-2xl sm:text-3xl lg:text-[34px] tracking-tight text-white group-hover:text-[#ea580c] transition-colors duration-300 leading-tight">
             {currentItem.title}
           </h3>
           {currentItem.subtitle && (
-            <p className="font-poppins font-medium text-xs sm:text-[13px] text-[#feff02] mt-1.5 tracking-wide">
+            <p className="font-poppins font-medium text-xs sm:text-[13px] text-[#ea580c] mt-1.5 tracking-wide">
               {currentItem.subtitle}
             </p>
           )}
@@ -88,7 +88,7 @@ export default function ProjectCard({
             className="object-cover object-center w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 filter drop-shadow-[0_12px_22px_rgba(0,0,0,0.5)]"
           />
           {/* Ambient image gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#162211]/50 via-transparent to-[#162211]/25 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#273813]/50 via-transparent to-[#273813]/25 pointer-events-none" />
         </div>
 
         {/* Project short description text */}
@@ -100,18 +100,18 @@ export default function ProjectCard({
 
         {/* Bottom action button container */}
         <div className="w-full px-6 sm:px-7 lg:px-8">
-          <div className="w-full bg-[#feff02] rounded-full p-2 sm:p-2.5 pl-5 sm:pl-6 flex items-center justify-between gap-3 shadow-lg border border-black/10 transition-colors duration-300 group-hover:bg-[#f5f600]">
-            <span className="font-poppins text-xs sm:text-[16px] text-[#121a0d] font-semibold tracking-normal">
+          <div className="w-full bg-[#ea580c] rounded-full p-2 sm:p-2.5 pl-5 sm:pl-6 flex items-center justify-between gap-3 shadow-lg border border-black/10 transition-colors duration-300 group-hover:bg-[#c2410c]">
+            <span className="font-poppins text-xs sm:text-[16px] text-[#ffffff] font-semibold tracking-normal">
               {currentItem.ctaText}
             </span>
 
             {/* Action link arrow icon */}
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#162211] flex items-center justify-center shrink-0 shadow-md group-hover:bg-black transition-all duration-300">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#273813] flex items-center justify-center shrink-0 shadow-md group-hover:bg-black transition-all duration-300">
               <ArrowUpRight
                 ref={arrowRef}
                 size={20}
                 strokeWidth={2.8}
-                className="text-[#feff02] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                className="text-[#ea580c] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
               />
             </div>
           </div>

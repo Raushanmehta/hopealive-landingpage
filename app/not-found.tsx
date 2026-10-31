@@ -7,16 +7,16 @@ export default function NotFound() {
     <main className="bg-[#f8f6f0] min-h-screen">
       <section
         aria-label="404 Page Not Found"
-        className="relative w-full bg-[#f8f6f0] text-[#1a2614] px-4 md:px-12 py-24 md:py-32 overflow-hidden"
+        className="relative w-full bg-[#f8f6f0] text-[#273813] px-4 md:px-12 py-24 md:py-32 overflow-hidden"
       >
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
           <div className="relative my-2 select-none">
-            <span className="font-poppins font-black text-8xl sm:text-9xl lg:text-[140px] tracking-tighter text-[#1f2c16] leading-none block">
+            <span className="font-poppins font-black text-8xl sm:text-9xl lg:text-[140px] tracking-tighter text-[#365314] leading-none block">
               404
             </span>
           </div>
 
-          <h1 className="font-poppins font-bold text-3xl sm:text-5xl lg:text-[54px] text-[#1b2715] tracking-tight leading-[1.15] mt-6 mb-4">
+          <h1 className="font-poppins font-bold text-3xl sm:text-5xl lg:text-[54px] text-[#273813] tracking-tight leading-[1.15] mt-6 mb-4">
             Page Not Found
           </h1>
 
@@ -26,7 +26,7 @@ export default function NotFound() {
 
           <Link
             href="/"
-            className="btn-leaf inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#feff02] text-[#121a0d] hover:bg-[#1f2c16] hover:text-[#feff02] font-poppins font-bold text-sm tracking-wide rounded-xl shadow-lg transition-all cursor-pointer select-none"
+            className="btn-leaf inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#ea580c] text-[#ffffff] hover:bg-[#365314] hover:text-[#ea580c] font-poppins font-bold text-sm tracking-wide rounded-xl shadow-lg transition-all cursor-pointer select-none"
           >
             <Home size={16} strokeWidth={2.6} />
             <span>Back to Home</span>

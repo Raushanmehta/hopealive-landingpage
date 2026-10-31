@@ -40,7 +40,7 @@ export default function HeroSection({ data: propData, className }: SectionProps<
       ref={heroRef}
       id="hero"
       aria-label="Hero Section"
-      className={`relative min-h-[100svh] min-h-screen w-full overflow-hidden flex flex-col justify-end pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-10 sm:pb-14 lg:pb-20 bg-[#162211] px-4 md:px-12 ${className || ""}`}
+      className={`relative min-h-[100svh] min-h-screen w-full overflow-hidden flex flex-col justify-end pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-10 sm:pb-14 lg:pb-20 bg-[#273813] px-4 md:px-12 ${className || ""}`}
     >
       {/* 1. Cinematic Background Image */}
       <div
@@ -98,7 +98,7 @@ export default function HeroSection({ data: propData, className }: SectionProps<
                 onMouseLeave={() =>
                   animateHeroButtonLeave(ctaButtonRef.current, arrowRef.current)
                 }
-                className="btn-leaf group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#feff02] text-[#121a0d] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide shadow-xl hover:bg-[#f5f600] active:scale-[0.98] transition-all duration-200 cursor-pointer select-none shrink-0"
+                className="btn-leaf group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#ea580c] text-[#ffffff] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide shadow-xl hover:bg-[#c2410c] active:scale-[0.98] transition-all duration-200 cursor-pointer select-none shrink-0"
               >
                 <span>{data.cta.label}</span>
                 <ArrowUpRight

@@ -36,7 +36,7 @@ export const CausesCard = forwardRef<HTMLDivElement, CausesCardProps>(
       const iconProps = {
         size: 42,
         strokeWidth: 1.8,
-        className: `transition-transform duration-300 transform group-hover:scale-110 ${active ? "text-[#121a0d]" : "text-white"
+        className: `transition-transform duration-300 transform group-hover:scale-110 ${active ? "text-[#ffffff]" : "text-white"
           }`,
       };
 
@@ -124,14 +124,14 @@ export const CausesCard = forwardRef<HTMLDivElement, CausesCardProps>(
           }
         }}
         className={`group relative flex flex-col justify-between min-h-[390px] sm:min-h-[420px] p-8 sm:p-9 lg:p-10 rounded-tl-[54px] sm:rounded-tl-[64px] rounded-br-[54px] sm:rounded-br-[64px] rounded-tr-2xl rounded-bl-2xl shadow-xl transition-all duration-500 ease-out cursor-pointer select-none ${isActive
-            ? "bg-[#feff02] text-[#121a0d] scale-[1.01] shadow-2xl shadow-[#feff02]/15"
-            : "bg-[#1f2c16] text-white border border-white/10 hover:border-white/25 hover:bg-[#25361c]"
+            ? "bg-[#ea580c] text-[#ffffff] scale-[1.01] shadow-2xl shadow-[#ea580c]/15"
+            : "bg-[#365314] text-white border border-white/10 hover:border-white/25 hover:bg-[#25361c]"
           } ${className}`}
       >
         {/* Card header title icon */}
         <div className="flex items-start justify-between gap-4 w-full">
           <h3
-            className={`font-poppins font-bold text-2xl sm:text-[28px] lg:text-[32px] tracking-tight leading-[1.15] max-w-[210px] ${isActive ? "text-[#121a0d]" : "text-white"
+            className={`font-poppins font-bold text-2xl sm:text-[28px] lg:text-[32px] tracking-tight leading-[1.15] max-w-[210px] ${isActive ? "text-[#ffffff]" : "text-white"
               }`}
           >
             {cardData.title}
@@ -146,7 +146,7 @@ export const CausesCard = forwardRef<HTMLDivElement, CausesCardProps>(
         <div className="mt-12 sm:mt-16">
           <p
             className={`font-poppins text-sm sm:text-[15px] leading-relaxed transition-colors duration-300 ${isActive
-                ? "text-[#121a0d]/90 font-medium"
+                ? "text-[#ffffff]/90 font-medium"
                 : "text-[#a8b3a4] font-normal"
               }`}
           >

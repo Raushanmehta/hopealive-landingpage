@@ -63,7 +63,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
 
           {submitted ? (
             <div className="py-8 flex flex-col items-center justify-center text-center space-y-3">
-              <CheckCircle2 className="w-14 h-14 text-[#feff02] animate-bounce" />
+              <CheckCircle2 className="w-14 h-14 text-[#ea580c] animate-bounce" />
               <h4 className="text-xl font-bold font-poppins text-white">
                 Thank You!
               </h4>
@@ -83,7 +83,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
                   placeholder="Enter your name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:border-[#feff02] focus:bg-white/10 focus:outline-none transition-colors font-poppins text-sm"
+                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:border-[#ea580c] focus:bg-white/10 focus:outline-none transition-colors font-poppins text-sm"
                 />
               </div>
 
@@ -97,14 +97,14 @@ export function ModalProvider({ children }: { children: ReactNode }) {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:border-[#feff02] focus:bg-white/10 focus:outline-none transition-colors font-poppins text-sm"
+                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:border-[#ea580c] focus:bg-white/10 focus:outline-none transition-colors font-poppins text-sm"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="btn-leaf w-full flex items-center justify-center gap-2 py-3.5 px-6 bg-[#feff02] text-[#121a0d] font-poppins font-bold text-sm tracking-wide rounded-xl shadow-lg hover:bg-[#e6e700] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
+                  className="btn-leaf w-full flex items-center justify-center gap-2 py-3.5 px-6 bg-[#ea580c] text-[#ffffff] font-poppins font-bold text-sm tracking-wide rounded-xl shadow-lg hover:bg-[#c2410c] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
                 >
                   <span>Submit Information</span>
                   <ArrowUpRight size={18} strokeWidth={2.5} />

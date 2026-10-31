@@ -70,7 +70,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
     return (
         <footer
             ref={footerRef}
-            className={`relative w-full bg-[#1f2c16] text-[#b0bfae] overflow-hidden pt-12 sm:pt-16 lg:pt-16 pb-0 border-t border-white/5 px-4 md:px-12 ${className || ""}`}
+            className={`relative w-full bg-[#365314] text-[#b0bfae] overflow-hidden pt-12 sm:pt-16 lg:pt-16 pb-0 border-t border-white/5 px-4 md:px-12 ${className || ""}`}
         >
             <div className="max-w-7xl mx-auto w-full">
                 {/* Upper footer content row */}
@@ -80,7 +80,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                         <div ref={headlineRef} className="flex items-center gap-3 sm:gap-3.5">
                             <BrandLogoIcon
                                 size={36}
-                                color="#feff02"
+                                color="#ea580c"
                                 className="drop-shadow-[0_0_12px_rgba(254,255,2,0.6)] shrink-0 transition-transform duration-300 hover:rotate-12 sm:w-10 sm:h-10"
                             />
                             <Link href="/" className="inline-flex items-center select-none">
@@ -115,7 +115,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                     aria-label={social.label}
                                     onMouseEnter={(e) => animateSocialHover(e.currentTarget)}
                                     onMouseLeave={(e) => animateSocialLeave(e.currentTarget)}
-                                    className="social-btn w-10 h-10 rounded-full bg-[#feff02] text-[#121a0d] flex items-center justify-center transition-shadow shadow-md hover:shadow-[0_0_14px_rgba(254,255,2,0.45)] cursor-pointer shrink-0 active:scale-95"
+                                    className="social-btn w-10 h-10 rounded-full bg-[#ea580c] text-[#ffffff] flex items-center justify-center transition-shadow shadow-md hover:shadow-[0_0_14px_rgba(254,255,2,0.45)] cursor-pointer shrink-0 active:scale-95"
                                 >
                                     {getSocialIcon(social.platform)}
                                 </a>
@@ -135,7 +135,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-8">
                             {/* Navigation links column list */}
                             <div ref={linksColumnRef}>
-                                <h3 className="font-poppins uppercase tracking-[0.16em] text-sm sm:text-[18px] font-semibold text-[#feff02] mb-4 sm:mb-5">
+                                <h3 className="font-poppins uppercase tracking-[0.16em] text-sm sm:text-[18px] font-semibold text-[#ea580c] mb-4 sm:mb-5">
                                     {data.linksSection.title}
                                 </h3>
                                 <ul className="space-y-2 sm:space-y-2">
@@ -145,7 +145,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                                 href={link.href}
                                                 onMouseEnter={(e) => animateFooterLinkHover(e.currentTarget)}
                                                 onMouseLeave={(e) => animateFooterLinkLeave(e.currentTarget)}
-                                                className="inline-block font-poppins text-xs sm:text-sm text-[#a1b099] hover:text-[#feff02] transition-colors duration-200 py-0.5"
+                                                className="inline-block font-poppins text-xs sm:text-sm text-[#a1b099] hover:text-[#ea580c] transition-colors duration-200 py-0.5"
                                             >
                                                 {link.label}
                                             </Link>
@@ -157,7 +157,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                             {/* Quick Links Column */}
                             {data.quickLinksSection && (
                                 <div ref={quickLinksColumnRef}>
-                                    <h3 className="font-poppins uppercase tracking-[0.16em] text-sm sm:text-[18px] font-semibold text-[#feff02] mb-4 sm:mb-5">
+                                    <h3 className="font-poppins uppercase tracking-[0.16em] text-sm sm:text-[18px] font-semibold text-[#ea580c] mb-4 sm:mb-5">
                                         {data.quickLinksSection.title}
                                     </h3>
                                     <ul className="space-y-2 sm:space-y-2">
@@ -167,7 +167,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                                     href={link.href}
                                                     onMouseEnter={(e) => animateFooterLinkHover(e.currentTarget)}
                                                     onMouseLeave={(e) => animateFooterLinkLeave(e.currentTarget)}
-                                                    className="inline-block font-poppins text-xs sm:text-sm text-[#a1b099] hover:text-[#feff02] transition-colors duration-200 py-0.5"
+                                                    className="inline-block font-poppins text-xs sm:text-sm text-[#a1b099] hover:text-[#ea580c] transition-colors duration-200 py-0.5"
                                                 >
                                                     {link.label}
                                                 </Link>
@@ -180,7 +180,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                             {/* Location and contact column */}
                             <div ref={locationColumnRef} className="col-span-2 sm:col-span-1 flex flex-col justify-between pt-4 sm:pt-0 border-t border-white/5 sm:border-transparent">
                                 <div>
-                                    <h3 className="font-poppins uppercase tracking-[0.16em] text-sm sm:text-[18px] font-semibold text-[#feff02] mb-4 sm:mb-5">
+                                    <h3 className="font-poppins uppercase tracking-[0.16em] text-sm sm:text-[18px] font-semibold text-[#ea580c] mb-4 sm:mb-5">
                                         {data.locationSection.title}
                                     </h3>
                                     <div className="space-y-1 text-xs sm:text-sm font-poppins text-[#a1b099] leading-relaxed">
@@ -194,7 +194,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                             <p key={phone}>
                                                 <a
                                                     href={`tel:${phone.replace(/\s+/g, "")}`}
-                                                    className="hover:text-[#feff02] transition-colors inline-block py-0.5"
+                                                    className="hover:text-[#ea580c] transition-colors inline-block py-0.5"
                                                 >
                                                     {phone}
                                                 </a>
@@ -204,7 +204,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                             <p className="break-all sm:break-normal">
                                                 <a
                                                     href={`mailto:${data.locationSection.email}`}
-                                                    className="hover:text-[#feff02] transition-colors inline-block py-0.5"
+                                                    className="hover:text-[#ea580c] transition-colors inline-block py-0.5"
                                                 >
                                                     {data.locationSection.email}
                                                 </a>

@@ -89,7 +89,7 @@ export default function ProjectSection({
       ref={sectionRef}
       id="projects"
       aria-label="HopeAlive Foundation Key Impact Projects"
-      className="relative w-full bg-[#f8f6f0] text-[#1a2614] px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
+      className="relative w-full bg-[#f8f6f0] text-[#273813] px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header content grid layout */}
@@ -100,7 +100,7 @@ export default function ProjectSection({
               ref={badgeRef}
               className="inline-flex flex-col items-start w-fit select-none"
             >
-              <span className="text-sm lg:text-lg font-poppins font-medium text-[#1b2715]">
+              <span className="text-sm lg:text-lg font-poppins font-medium text-[#273813]">
                 {data.badge.text}
               </span>
               <svg
@@ -117,7 +117,7 @@ export default function ProjectSection({
                   y1="4"
                   x2="118"
                   y2="4"
-                  stroke="#feff02"
+                  stroke="#ea580c"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
@@ -129,7 +129,7 @@ export default function ProjectSection({
           <div className="lg:col-span-8 flex flex-col">
             <h2
               ref={headlineRef}
-              className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl  text-[#1b2715] tracking-tight leading-[1.12] select-none"
+              className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl  text-[#273813] tracking-tight leading-[1.12] select-none"
             >
               <span className="project-headline-line block">
                 {data.headline.line1}
@@ -155,7 +155,7 @@ export default function ProjectSection({
                 onClick={() => api?.scrollPrev()}
                 disabled={!canScrollPrev}
                 aria-label="Previous projects"
-                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#1f2c16] text-[#feff02] border border-black/10 hover:bg-[#162211] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#365314] text-[#ea580c] border border-black/10 hover:bg-[#273813] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
               >
                 <ArrowLeft size={18} strokeWidth={2.4} />
               </button>
@@ -164,7 +164,7 @@ export default function ProjectSection({
                 onClick={() => api?.scrollNext()}
                 disabled={!canScrollNext}
                 aria-label="Next projects"
-                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#1f2c16] text-[#feff02] border border-black/10 hover:bg-[#162211] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#365314] text-[#ea580c] border border-black/10 hover:bg-[#273813] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
               >
                 <ArrowRight size={18} strokeWidth={2.4} />
               </button>

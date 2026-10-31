@@ -35,7 +35,7 @@ const DialogContent = React.forwardRef<
       <BaseDialog.Popup
         ref={ref}
         className={cn(
-          "relative w-full max-w-lg rounded-3xl bg-[#1b2715] border border-white/10 p-6 sm:p-8 text-white shadow-2xl transition-all duration-300 focus:outline-none",
+          "relative w-full max-w-lg rounded-3xl bg-[#273813] border border-white/10 p-6 sm:p-8 text-white shadow-2xl transition-all duration-300 focus:outline-none",
           className
         )}
         {...props}

@@ -119,7 +119,7 @@ export default function AboutSection({
       ref={sectionRef}
       id="about"
       aria-label="About HopeAlive Foundation"
-      className="relative w-full bg-[#f8f6f0] text-[#1a2614]  px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
+      className="relative w-full bg-[#f8f6f0] text-[#273813]  px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header content grid layout */}
@@ -131,7 +131,7 @@ export default function AboutSection({
               ref={badgeRef}
               className="inline-flex flex-col items-start w-fit select-none"
             >
-              <span className=" text-sm lg:text-lg font-poppins font-medium  text-[#1b2715]">
+              <span className=" text-sm lg:text-lg font-poppins font-medium  text-[#273813]">
                 {data.badge.text}
               </span>
               <svg
@@ -148,7 +148,7 @@ export default function AboutSection({
                   y1="4"
                   x2="118"
                   y2="4"
-                  stroke="#feff02"
+                  stroke="#ea580c"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
@@ -157,7 +157,7 @@ export default function AboutSection({
 
             {/* Statistics counter value block */}
             <div ref={statsRef} className="mt-12 sm:mt-16 lg:mt-auto pt-4">
-              <div className="font-poppins font-bold text-6xl sm:text-7xl lg:text-[84px] xl:text-[92px] tracking-tight text-[#1b2715] leading-none select-none tabular-nums">
+              <div className="font-poppins font-bold text-6xl sm:text-7xl lg:text-[84px] xl:text-[92px] tracking-tight text-[#273813] leading-none select-none tabular-nums">
                 <span ref={counterRef}>0{data.stats.value.replace(/^\d+/, "") || "K+"}</span>
               </div>
               <div className="mt-2 font-poppins font-semibold text-xs sm:text-[13px] uppercase tracking-[0.16em] text-[#556350] select-none">
@@ -171,7 +171,7 @@ export default function AboutSection({
             {/* Section main heading title */}
             <h2
               ref={headlineRef}
-              className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl text-[#1b2715] tracking-tight leading-[1.12] select-none"
+              className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl text-[#273813] tracking-tight leading-[1.12] select-none"
             >
               <span className="about-headline-line block">{data.headline.line1}</span>
               {data.headline.line2 && (
@@ -201,14 +201,14 @@ export default function AboutSection({
                   onMouseLeave={() =>
                     animateAboutButtonLeave(ctaButtonRef.current, arrowRef.current)
                   }
-                  className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#1f2c16] text-[#feff02] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-[#162211] active:scale-[0.98] transition-all duration-200 cursor-pointer select-none"
+                  className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#365314] text-[#ea580c] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-[#273813] active:scale-[0.98] transition-all duration-200 cursor-pointer select-none"
                 >
                   <span>{data.cta.label}</span>
                   <ArrowUpRight
                     ref={arrowRef}
                     size={18}
                     strokeWidth={2.6}
-                    className="transition-transform duration-200 shrink-0 text-[#feff02]"
+                    className="transition-transform duration-200 shrink-0 text-[#ea580c]"
                   />
                 </button>
               </div>

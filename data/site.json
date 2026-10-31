@@ -94,11 +94,11 @@
               "dot": true
             },
             "headline": {
-              "line1": "Children,",
-              "line2": "Nurturing Communities,",
-              "line3": "Transforming Lives"
+              "line1": "Empowering,",
+              "line2": "Inspiring Communities,",
+              "line3": "Restoring Futures"
             },
-            "description": "HopeAlive Foundation works on the frontlines to empower vulnerable children and underserved communities through education, healthcare, and sustainable development.",
+            "description": "HopeAlive Foundation works on frontline relief to support underserved children and rural families through education, nutrition, and healthcare.",
             "cta": {
               "label": "Explore Now",
               "href": "/project"
@@ -119,10 +119,10 @@
               "label": "LIVES TRANSFORMED"
             },
             "headline": {
-              "line1": "International Charity Organization",
-              "line2": " "
+              "line1": "Global Humanitarian Relief Network",
+              "line2": ""
             },
-            "description": "Your support will help us to make life better living for poor vulnerable children. We are a non-profit organization working for children and communities in need.",
+            "description": "Your generosity enables us to provide sustainable futures for vulnerable children. We deliver non-profit solutions across global communities in deepest crisis.",
             "cta": {
               "label": "Support Our Mission",
               "href": "/about"
@@ -148,10 +148,10 @@
               "dot": true
             },
             "headline": {
-              "line1": "The Causes We Care & Support ",
+              "line1": "Critical Causes We Champion Everyday",
               "line2": ""
             },
-            "description": "Every contribution creates opportunities for children, families, and communities to build a brighter and healthier future together.",
+            "description": "Direct contributions bring essential resources to vulnerable children, families, and villages to secure healthy and dignified lives.",
             "items": [
               {
                 "id": "child-nutrition",
@@ -207,10 +207,10 @@
               "dot": true
             },
             "headline": {
-              "line1": "Our Featured Ongoing the Projects",
+              "line1": "Our High Impact Global Initiatives",
               "line2": ""
             },
-            "description": "Discover HopeAlive Foundation's active humanitarian projects — delivering quality education, child healthcare, clean water, and nutritional aid across vulnerable communities.",
+            "description": "Explore ongoing relief missions delivering clean water solutions, emergency medical treatment, classroom education, and emergency meals across impoverished communities worldwide.",
             "projectsList": [
               {
                 "id": "project-education",
@@ -284,10 +284,10 @@
               "dot": true
             },
             "headline": {
-              "line1": "We Don't Believe Us See my Review",
+              "line1": "Real Stories From Families We Support",
               "line2": ""
             },
-            "description": "Hear how HopeAlive Foundation touches lives every day through dedicated volunteer work, grassroots healthcare, child nutrition, and life-changing educational programs.",
+            "description": "Discover firsthand how grassroots intervention saves lives through child nutrition outreach, essential medicines, compassionate support, and sustainable village development.",
             "items": [
               {
                 "id": "michael-b",
@@ -343,10 +343,10 @@
               "dot": true
             },
             "headline": {
-              "line1": "Frequently Asked Questions ?",
+              "line1": "Frequently Answered Community Queries",
               "line2": ""
             },
-            "description": "Have questions about how your contributions make an impact, our frontline volunteer initiatives, or financial transparency? Discover clear answers below.",
+            "description": "Find direct answers regarding resource allocation, on-ground humanitarian distribution, grassroots community partnerships, and verified donor fund transparency.",
             "faqsList": [
               {
                 "id": "faq-1",

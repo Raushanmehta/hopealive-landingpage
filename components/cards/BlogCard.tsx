@@ -47,7 +47,7 @@ export const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(
           ref={setRefs}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="relative flex flex-col flex-1 bg-[#1c2918] rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-xl transition-all duration-500 ease-out select-none cursor-pointer border border-white/5 hover:border-white/10"
+          className="relative flex flex-col flex-1 bg-[#2e4412] rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-xl transition-all duration-500 ease-out select-none cursor-pointer border border-white/5 hover:border-white/10"
         >
           {/* Top card image container */}
           <div className="relative w-full h-[220px] sm:h-[240px] md:h-[250px] overflow-hidden">
@@ -59,7 +59,7 @@ export const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(
               className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             />
             {/* Natural subtle ambient vignette */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1c2918]/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#2e4412]/60 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Card content and metadata */}
@@ -71,19 +71,19 @@ export const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(
               </span>
 
               {/* Blog article headline title */}
-              <h3 className="mt-2.5 mb-6 sm:mb-8 font-poppins font-semibold text-lg sm:text-xl lg:text-[22px] text-white leading-snug tracking-normal group-hover:text-[#feff02] transition-colors duration-300">
+              <h3 className="mt-2.5 mb-6 sm:mb-8 font-poppins font-semibold text-lg sm:text-xl lg:text-[22px] text-white leading-snug tracking-normal group-hover:text-[#ea580c] transition-colors duration-300">
                 {post.title}
               </h3>
             </div>
 
             {/* Read more action link */}
-            <div className="inline-flex items-center gap-1.5 font-poppins text-xs sm:text-sm font-medium text-[#feff02] mt-auto">
+            <div className="inline-flex items-center gap-1.5 font-poppins text-xs sm:text-sm font-medium text-[#ea580c] mt-auto">
               <span>Read More</span>
               <ArrowUpRight
                 ref={arrowRef}
                 size={16}
                 strokeWidth={2.4}
-                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 text-[#feff02] shrink-0"
+                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 text-[#ea580c] shrink-0"
               />
             </div>
           </div>

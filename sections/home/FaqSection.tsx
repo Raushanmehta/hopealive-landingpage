@@ -61,7 +61,7 @@ export default function FaqSection({
       ref={sectionRef}
       id="faqs"
       aria-label="HopeAlive Foundation Frequently Asked Questions"
-      className="relative w-full bg-[#f8f6f0] text-[#1a2614] px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
+      className="relative w-full bg-[#f8f6f0] text-[#273813] px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header content grid layout */}
@@ -72,7 +72,7 @@ export default function FaqSection({
               ref={badgeRef}
               className="inline-flex flex-col items-start w-fit select-none"
             >
-              <span className="text-sm lg:text-lg font-poppins font-medium text-[#1b2715]">
+              <span className="text-sm lg:text-lg font-poppins font-medium text-[#273813]">
                 {data.badge.text}
               </span>
               <svg
@@ -89,7 +89,7 @@ export default function FaqSection({
                   y1="4"
                   x2="118"
                   y2="4"
-                  stroke="#feff02"
+                  stroke="#ea580c"
                   strokeWidth="10"
                   strokeLinecap="round"
                 />
@@ -100,7 +100,7 @@ export default function FaqSection({
           {/* Right headline and narrative */}
           <div className="lg:col-span-8 flex flex-col">
             {/* Section main heading title */}
-            <h2 className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl text-[#1b2715] tracking-tight leading-[1.12] select-none">
+            <h2 className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl text-[#273813] tracking-tight leading-[1.12] select-none">
               <span className="block">{data.headline.line1}</span>
               {data.headline.line2 && (
                 <span className="block">{data.headline.line2}</span>
@@ -123,8 +123,8 @@ export default function FaqSection({
               <div
                 key={item.id}
                 className={`overflow-hidden rounded-tl-[40px] rounded-br-[40px] rounded-tr-none rounded-bl-none bg-white transition-all duration-300 border ${isOpen
-                  ? "border-[#1f2c16] shadow-lg shadow-black/[0.04]"
-                  : "border-[#1b2715]/10 shadow-sm hover:border-[#1b2715]/25"
+                  ? "border-[#365314] shadow-lg shadow-black/[0.04]"
+                  : "border-[#273813]/10 shadow-sm hover:border-[#273813]/25"
                   }`}
               >
                 <button
@@ -136,21 +136,21 @@ export default function FaqSection({
                   <div className="flex items-center gap-3.5 sm:gap-4 flex-1">
                     <span
                       className={`shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors duration-200 ${isOpen
-                        ? "bg-[#1f2c16] text-[#feff02]"
-                        : "bg-[#f8f6f0] text-[#1b2715] group-hover:bg-[#1f2c16] group-hover:text-[#feff02]"
+                        ? "bg-[#365314] text-[#ea580c]"
+                        : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#365314] group-hover:text-[#ea580c]"
                         }`}
                     >
                       <HelpCircle size={18} strokeWidth={2.2} />
                     </span>
-                    <h3 className="font-poppins font-bold text-base sm:text-lg lg:text-xl text-[#1b2715] leading-snug group-hover:text-[#2d5a27] transition-colors">
+                    <h3 className="font-poppins font-bold text-base sm:text-lg lg:text-xl text-[#273813] leading-snug group-hover:text-[#2d5a27] transition-colors">
                       {item.question}
                     </h3>
                   </div>
 
                   <span
                     className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-transform duration-300 ${isOpen
-                      ? "rotate-180 bg-[#1f2c16] text-[#feff02]"
-                      : "bg-[#f8f6f0] text-[#1b2715] group-hover:bg-[#1f2c16]/10"
+                      ? "rotate-180 bg-[#365314] text-[#ea580c]"
+                      : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#365314]/10"
                       }`}
                   >
                     <ChevronDown size={18} strokeWidth={2.4} />
@@ -167,12 +167,12 @@ export default function FaqSection({
                   }}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-5 sm:px-7 pb-6 sm:pb-7 pt-1 border-t border-[#1b2715]/5">
+                    <div className="px-5 sm:px-7 pb-6 sm:pb-7 pt-1 border-t border-[#273813]/5">
                       <p className="font-poppins text-sm sm:text-[15px] text-[#556350] leading-relaxed">
                         {item.answer}
                       </p>
                       {item.category && (
-                        <div className="mt-3.5 inline-flex items-center gap-1.5 text-xs font-poppins font-semibold uppercase tracking-wider text-[#1b2715]/60 bg-[#f8f6f0] px-3 py-1 rounded-md">
+                        <div className="mt-3.5 inline-flex items-center gap-1.5 text-xs font-poppins font-semibold uppercase tracking-wider text-[#273813]/60 bg-[#f8f6f0] px-3 py-1 rounded-md">
                           <CheckCircle2 size={13} className="text-[#2d5a27]" />
                           <span>Topic: {item.category}</span>
                         </div>
@@ -187,7 +187,7 @@ export default function FaqSection({
 
         {/* Bottom help CTA banner */}
         {data.cta && (
-          <div className="mt-8 sm:mt-10 lg:mt-12 bg-[#1f2c16] text-white p-8 sm:p-10 lg:p-12 rounded-tl-[80px] rounded-br-[80px] rounded-tr-none rounded-bl-none shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-white/10 select-none">
+          <div className="mt-8 sm:mt-10 lg:mt-12 bg-[#365314] text-white p-8 sm:p-10 lg:p-12 rounded-tl-[80px] rounded-br-[80px] rounded-tr-none rounded-bl-none shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-white/10 select-none">
             <div className="flex-1 text-left">
               <h3 className="font-poppins font-bold text-2xl sm:text-3xl text-white tracking-tight">
                 {data.cta.title}
@@ -199,7 +199,7 @@ export default function FaqSection({
 
             <Link
               href={data.cta.buttonHref}
-              className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#feff02] text-[#121a0d] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-white active:scale-[0.98] transition-all duration-200 cursor-pointer shrink-0 select-none"
+              className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#ea580c] text-[#ffffff] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-white active:scale-[0.98] transition-all duration-200 cursor-pointer shrink-0 select-none"
             >
               <span>{data.cta.buttonText}</span>
               <ArrowUpRight size={18} strokeWidth={2.4} />
