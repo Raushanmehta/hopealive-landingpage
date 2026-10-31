@@ -300,11 +300,11 @@ export interface ProjectItem {
   title: string;
   subtitle?: string;
   description?: string;
-  category: string;
-  ctaText: string;
+  category?: string;
+  ctaText?: string;
   image: string;
   alt: string;
-  href: string;
+  href?: string;
   stats?: ProjectStat[];
   challengeSolution?: {
     title: string;
