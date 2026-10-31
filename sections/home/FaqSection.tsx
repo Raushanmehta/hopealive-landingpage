@@ -123,7 +123,7 @@ export default function FaqSection({
               <div
                 key={item.id}
                 className={`overflow-hidden rounded-tl-[40px] rounded-br-[40px] rounded-tr-none rounded-bl-none bg-white transition-all duration-300 border ${isOpen
-                  ? "border-[#365314] shadow-lg shadow-black/[0.04]"
+                  ? "border-[#331600] shadow-lg shadow-black/[0.04]"
                   : "border-[#273813]/10 shadow-sm hover:border-[#273813]/25"
                   }`}
               >
@@ -136,8 +136,8 @@ export default function FaqSection({
                   <div className="flex items-center gap-3.5 sm:gap-4 flex-1">
                     <span
                       className={`shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors duration-200 ${isOpen
-                        ? "bg-[#365314] text-[#ea580c]"
-                        : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#365314] group-hover:text-[#ea580c]"
+                        ? "bg-[#331600] text-[#ea580c]"
+                        : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#331600] group-hover:text-[#ea580c]"
                         }`}
                     >
                       <HelpCircle size={18} strokeWidth={2.2} />
@@ -149,8 +149,8 @@ export default function FaqSection({
 
                   <span
                     className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-transform duration-300 ${isOpen
-                      ? "rotate-180 bg-[#365314] text-[#ea580c]"
-                      : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#365314]/10"
+                      ? "rotate-180 bg-[#331600] text-[#ea580c]"
+                      : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#331600]/10"
                       }`}
                   >
                     <ChevronDown size={18} strokeWidth={2.4} />
@@ -187,7 +187,7 @@ export default function FaqSection({
 
         {/* Bottom help CTA banner */}
         {data.cta && (
-          <div className="mt-8 sm:mt-10 lg:mt-12 bg-[#365314] text-white p-8 sm:p-10 lg:p-12 rounded-tl-[80px] rounded-br-[80px] rounded-tr-none rounded-bl-none shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-white/10 select-none">
+          <div className="mt-8 sm:mt-10 lg:mt-12 bg-[#331600] text-white p-8 sm:p-10 lg:p-12 rounded-tl-[80px] rounded-br-[80px] rounded-tr-none rounded-bl-none shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-white/10 select-none">
             <div className="flex-1 text-left">
               <h3 className="font-poppins font-bold text-2xl sm:text-3xl text-white tracking-tight">
                 {data.cta.title}

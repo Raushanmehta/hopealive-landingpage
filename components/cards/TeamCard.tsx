@@ -12,7 +12,7 @@ interface TeamCardProps {
 
 export default function TeamCard({ member }: TeamCardProps) {
   return (
-    <div className="group relative bg-[#365314] text-white rounded-3xl overflow-hidden hover:border-[#ea580c]/40 transition-all duration-300 shadow-xl flex flex-col justify-between hover:-translate-y-1">
+    <div className="group relative bg-[#331600] text-white rounded-3xl overflow-hidden hover:border-[#ea580c]/40 transition-all duration-300 shadow-xl flex flex-col justify-between hover:-translate-y-1">
       {/* Team member image container */}
       <div className="relative w-full h-72 sm:h-80 overflow-hidden bg-[#273813]">
         <Image
@@ -21,7 +21,7 @@ export default function TeamCard({ member }: TeamCardProps) {
           fill
           className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#365314] via-transparent to-black/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#331600] via-transparent to-black/20 pointer-events-none" />
 
 
       </div>

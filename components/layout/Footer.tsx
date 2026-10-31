@@ -70,7 +70,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
     return (
         <footer
             ref={footerRef}
-            className={`relative w-full bg-[#365314] text-[#b0bfae] overflow-hidden pt-12 sm:pt-16 lg:pt-16 pb-0 border-t border-white/5 px-4 md:px-12 ${className || ""}`}
+            className={`relative w-full bg-[#331600] text-[#b0bfae] overflow-hidden pt-12 sm:pt-16 lg:pt-16 pb-0 border-t border-white/5 px-4 md:px-12 ${className || ""}`}
         >
             <div className="max-w-7xl mx-auto w-full">
                 {/* Upper footer content row */}

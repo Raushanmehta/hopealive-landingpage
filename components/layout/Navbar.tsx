@@ -118,7 +118,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
       <nav
         ref={navContainerRef}
         aria-label="Main Navigation"
-        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#365314] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#331600] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
       >
         <div
           ref={innerContainerRef}
@@ -215,7 +215,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="pointer-events-auto md:hidden w-[calc(100%-24px)] max-w-6xl mt-2 p-5 rounded-2xl bg-[#365314]/95 border border-white/10 backdrop-blur-xl shadow-2xl space-y-4"
+          className="pointer-events-auto md:hidden w-[calc(100%-24px)] max-w-6xl mt-2 p-5 rounded-2xl bg-[#331600]/95 border border-white/10 backdrop-blur-xl shadow-2xl space-y-4"
         >
           <div className="flex flex-col space-y-3">
             {data.links.map((link: NavItem) => {
@@ -260,7 +260,7 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
     <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none flex flex-col items-center w-full">
       <nav
         aria-label="Main Navigation"
-        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#365314] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+        className="pointer-events-auto relative w-[calc(100%-24px)] max-w-6xl px-4 mt-3 rounded-xl border border-white/10 bg-[#331600] backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
       >
         <div className="w-full max-w-7xl mx-auto flex items-center justify-between py-2.5 sm:py-2.5">
           {/* Brand logo navigation link */}

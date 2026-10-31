@@ -155,7 +155,7 @@ export default function ProjectSection({
                 onClick={() => api?.scrollPrev()}
                 disabled={!canScrollPrev}
                 aria-label="Previous projects"
-                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#365314] text-[#ea580c] border border-black/10 hover:bg-[#273813] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#331600] text-[#ea580c] border border-black/10 hover:bg-[#273813] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
               >
                 <ArrowLeft size={18} strokeWidth={2.4} />
               </button>
@@ -164,7 +164,7 @@ export default function ProjectSection({
                 onClick={() => api?.scrollNext()}
                 disabled={!canScrollNext}
                 aria-label="Next projects"
-                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#365314] text-[#ea580c] border border-black/10 hover:bg-[#273813] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#331600] text-[#ea580c] border border-black/10 hover:bg-[#273813] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
               >
                 <ArrowRight size={18} strokeWidth={2.4} />
               </button>

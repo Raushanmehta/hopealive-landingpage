@@ -218,7 +218,7 @@ export function animateNavbarScroll(
       borderLeftColor: "rgba(255, 255, 255, 0.1)",
       borderRightColor: "rgba(255, 255, 255, 0.1)",
       borderBottomColor: "rgba(255, 255, 255, 0.1)",
-      backgroundColor: "#365314",
+      backgroundColor: "#331600",
       boxShadow: "0 12px 40px rgba(0, 0, 0, 0.45)",
       opacity: 1,
       y: 0,

@@ -201,7 +201,7 @@ export default function AboutSection({
                   onMouseLeave={() =>
                     animateAboutButtonLeave(ctaButtonRef.current, arrowRef.current)
                   }
-                  className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#365314] text-[#ea580c] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-[#273813] active:scale-[0.98] transition-all duration-200 cursor-pointer select-none"
+                  className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#331600] text-[#ea580c] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-[#273813] active:scale-[0.98] transition-all duration-200 cursor-pointer select-none"
                 >
                   <span>{data.cta.label}</span>
                   <ArrowUpRight

@@ -11,7 +11,7 @@ export default function NotFound() {
       >
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
           <div className="relative my-2 select-none">
-            <span className="font-poppins font-black text-8xl sm:text-9xl lg:text-[140px] tracking-tighter text-[#365314] leading-none block">
+            <span className="font-poppins font-black text-8xl sm:text-9xl lg:text-[140px] tracking-tighter text-[#331600] leading-none block">
               404
             </span>
           </div>
@@ -26,7 +26,7 @@ export default function NotFound() {
 
           <Link
             href="/"
-            className="btn-leaf inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#ea580c] text-[#ffffff] hover:bg-[#365314] hover:text-[#ea580c] font-poppins font-bold text-sm tracking-wide rounded-xl shadow-lg transition-all cursor-pointer select-none"
+            className="btn-leaf inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#ea580c] text-[#ffffff] hover:bg-[#331600] hover:text-[#ea580c] font-poppins font-bold text-sm tracking-wide rounded-xl shadow-lg transition-all cursor-pointer select-none"
           >
             <Home size={16} strokeWidth={2.6} />
             <span>Back to Home</span>
