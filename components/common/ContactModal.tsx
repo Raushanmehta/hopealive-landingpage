@@ -20,9 +20,9 @@ const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export function ModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [title, setTitle] = useState("Contact Us");
+  const [title, setTitle] = useState("Join Our Mission");
   const [description, setDescription] = useState(
-    "Please fill out the form below and our team will get back to you shortly."
+    "Become part of the movement. Share your time, skills, or resources to uplift communities in need."
   );
 
   const [formData, setFormData] = useState({
@@ -75,9 +75,9 @@ export function ModalProvider({ children }: { children: ReactNode }) {
       {children}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>{title}</DialogTitle>
-            <DialogDescription>{description}</DialogDescription>
+          <DialogHeader className="text-center items-center">
+            <DialogTitle className="text-center">{title}</DialogTitle>
+            <DialogDescription className="text-center max-w-md mx-auto">{description}</DialogDescription>
           </DialogHeader>
 
           {submitted ? (
@@ -198,3 +198,4 @@ export function useAppModal() {
 }
 
 export default ModalProvider;
+
