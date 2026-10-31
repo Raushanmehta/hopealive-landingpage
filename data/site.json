@@ -30,10 +30,6 @@
                 "component": "HopeAliveTestimonials1"
               },
               {
-                "key": "blog",
-                "component": "HopeAliveBlog1"
-              },
-              {
                 "key": "faqs",
                 "component": "HopeAliveFaqs1"
               }
@@ -76,11 +72,6 @@
                 "id": "nav-testimonials",
                 "label": "Testimonials",
                 "href": "#testimonials"
-              },
-              {
-                "id": "nav-blog",
-                "label": "Blog",
-                "href": "#blog"
               },
               {
                 "id": "nav-faqs",
