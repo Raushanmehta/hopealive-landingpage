@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronDown, ArrowUpRight, HelpCircle, CheckCircle2 } from "lucide-react";
 import { site, SectionProps, FaqsData, FaqItem } from "@/data";
-import Link from "next/link";
+import { useAppModal } from "@/context/ModalContext";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -15,6 +15,7 @@ export default function FaqSection({
   data: propData,
   className,
 }: SectionProps<FaqsData> = {}) {
+  const { openModal } = useAppModal();
   const data = propData || site.faqs;
   const faqsList: FaqItem[] = data?.faqsList || [];
 
@@ -197,13 +198,14 @@ export default function FaqSection({
               </p>
             </div>
 
-            <Link
-              href={data.cta.buttonHref}
-              className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#ea580c] text-[#ffffff] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-white active:scale-[0.98] transition-all duration-200 cursor-pointer shrink-0 select-none"
+            <button
+              type="button"
+              onClick={openModal}
+              className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#ea580c] text-[#ffffff] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-white hover:text-[#ea580c] active:scale-[0.98] transition-all duration-200 cursor-pointer shrink-0 select-none border border-transparent hover:border-[#ea580c]/20"
             >
               <span>{data.cta.buttonText}</span>
               <ArrowUpRight size={18} strokeWidth={2.4} />
-            </Link>
+            </button>
           </div>
         )}
       </div>

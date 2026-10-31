@@ -119,7 +119,7 @@
               "label": "LIVES TRANSFORMED"
             },
             "headline": {
-              "line1": "Global Humanitarian Relief Network",
+              "line1": "Global Humanity Relief Network",
               "line2": ""
             },
             "description": "Your generosity enables us to provide sustainable futures for vulnerable children. We deliver non-profit solutions across global communities in deepest crisis.",
@@ -148,7 +148,7 @@
               "dot": true
             },
             "headline": {
-              "line1": "Critical Causes We Champion Everyday",
+              "line1": "Critical Humanitarian Causes ",
               "line2": ""
             },
             "description": "Direct contributions bring essential resources to vulnerable children, families, and villages to secure healthy and dignified lives.",
@@ -284,7 +284,7 @@
               "dot": true
             },
             "headline": {
-              "line1": "Real Stories From Families We Support",
+              "line1": "Real Stories Families We Support",
               "line2": ""
             },
             "description": "Discover firsthand how grassroots intervention saves lives through child nutrition outreach, essential medicines, compassionate support, and sustainable village development.",
@@ -343,7 +343,7 @@
               "dot": true
             },
             "headline": {
-              "line1": "Frequently Answered Community Queries",
+              "line1": "Frequently Answered  Queries",
               "line2": ""
             },
             "description": "Find direct answers regarding resource allocation, on-ground humanitarian distribution, grassroots community partnerships, and verified donor fund transparency.",
@@ -389,7 +389,7 @@
               "title": "Still have questions about our mission?",
               "description": "Our compassionate support team and field coordinators are here to provide all the answers you need.",
               "buttonText": "Get in Touch With Us",
-              "buttonHref": "/contact"
+              "buttonHref": "#"
             }
           }
         }
