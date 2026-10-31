@@ -180,9 +180,10 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
           {/* Right action button area */}
           <div className="flex items-center gap-3 shrink-0">
             {/* Primary CTA action button */}
-            <Link
-              ref={ctaButtonRef}
-              href={data.cta.href}
+            <button
+              ref={ctaButtonRef as any}
+              type="button"
+              onClick={() => openModal("Donate to HopeAlive", "Your donation directly helps vulnerable children, nutrition programs, and safe housing.")}
               onMouseEnter={handleButtonMouseEnter}
               onMouseLeave={handleButtonMouseLeave}
               className="btn-leaf relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#feff02] text-black font-poppins font-medium sm:font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:bg-[#f5f600] active:scale-[0.98] transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#feff02] cursor-pointer shrink-0 select-none"
@@ -194,7 +195,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
                 strokeWidth={2.6}
                 className="transition-transform duration-200 shrink-0"
               />
-            </Link>
+            </button>
 
             {/* Mobile Hamburger Button */}
             <button
@@ -301,18 +302,14 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
 
           {/* Call to action button */}
           <div className="flex items-center gap-3 shrink-0">
-            <button
-              type="button"
-              onClick={() => openModal("Donate to HopeAlive", "Your donation directly helps vulnerable children, nutrition programs, and safe housing.")}
-              className="btn-leaf relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#feff02] text-black font-poppins font-medium sm:font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:bg-[#f5f600] transition-all duration-200 shrink-0 select-none cursor-pointer"
-            >
+            <div className="btn-leaf relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#feff02] text-black font-poppins font-medium sm:font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:bg-[#f5f600] transition-all duration-200 shrink-0 select-none cursor-pointer">
               <span>{data.cta.label}</span>
               <ArrowUpRight
                 size={16}
                 strokeWidth={2.6}
                 className="shrink-0"
               />
-            </button>
+            </div>
 
             <button
               type="button"

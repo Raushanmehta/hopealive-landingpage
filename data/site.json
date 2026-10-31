@@ -78,11 +78,6 @@
                 "href": "#testimonials"
               },
               {
-                "id": "nav-blog",
-                "label": "Blog",
-                "href": "#blog"
-              },
-              {
                 "id": "nav-faqs",
                 "label": "FAQs",
                 "href": "#faqs"
@@ -1016,10 +1011,6 @@
                 {
                   "label": "Causes",
                   "href": "/causes"
-                },
-                {
-                  "label": "Blog",
-                  "href": "/blog"
                 },
                 {
                   "label": "Testimonial",

@@ -24,7 +24,11 @@ export const metadata: Metadata = {
   description: "HopeAlive is a global non-profit organization dedicated to empowering vulnerable children, supporting families, and uplifting communities through education, healthcare, and humanitarian aid.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
