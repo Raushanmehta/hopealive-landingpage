@@ -28,12 +28,24 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("hero");
   const isFirstRender = useRef(true);
 
-  // Scroll position state detection
+  // Scroll position and active section spy
   useEffect(() => {
+    const sectionIds = ["hero", "about", "causes", "projects", "testimonials", "faqs"];
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      const scrollPos = window.scrollY + 200;
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
+        if (el && el.offsetTop <= scrollPos) {
+          setActiveSection(sectionIds[i]);
+          break;
+        }
+      }
     };
 
     handleScroll();
@@ -161,14 +173,15 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
             className="hidden md:flex items-center gap-7 lg:gap-10"
           >
             {data.links.map((link: NavItem) => {
-              const isActive = pathname === link.href;
+              const linkHash = link.href.replace("#", "");
+              const isActive = activeSection === linkHash;
               return (
                 <Link
                   key={link.id}
                   href={link.href}
-                  className={`nav-link-item relative py-1 text-xs lg:text-[13px] font-poppins font-medium tracking-[0.08em] uppercase transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#ea580c] rounded-sm ${isActive
-                    ? "text-[#ea580c] font-semibold"
-                    : "text-[#fdf8f5]/90 hover:text-white"
+                  className={`nav-link-item relative py-1 text-xs lg:text-[13px] font-poppins font-semibold tracking-[0.08em] uppercase transition-all duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#ea580c] rounded-sm ${isActive
+                    ? "text-[#ea580c] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#ea580c] after:rounded-full"
+                    : "text-[#fdf8f5]/85 hover:text-[#ea580c]"
                     }`}
                 >
                   {link.label}
@@ -219,15 +232,16 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
         >
           <div className="flex flex-col space-y-3">
             {data.links.map((link: NavItem) => {
-              const isActive = pathname === link.href;
+              const linkHash = link.href.replace("#", "");
+              const isActive = activeSection === linkHash;
               return (
                 <Link
                   key={link.id}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`mobile-nav-item py-2 px-3 rounded-lg text-sm font-poppins font-medium tracking-wider uppercase transition-colors ${isActive
-                    ? "bg-white/10 text-[#ea580c] font-semibold"
-                    : "text-[#fdf8f5]/90 hover:bg-white/5 hover:text-white"
+                    ? "bg-[#ea580c]/15 text-[#ea580c] font-semibold border-l-2 border-[#ea580c]"
+                    : "text-[#fdf8f5]/90 hover:bg-white/5 hover:text-[#ea580c]"
                     }`}
                 >
                   {link.label}
