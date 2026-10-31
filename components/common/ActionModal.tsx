@@ -67,14 +67,14 @@ export function ModalProvider({ children }: { children: ReactNode }) {
               <h4 className="text-xl font-bold font-poppins text-white">
                 Thank You!
               </h4>
-              <p className="text-sm text-[#b0bfae]">
+              <p className="text-sm text-[#d6c4b8]">
                 We have received your details and will get in touch shortly.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs uppercase tracking-wider font-semibold text-[#a8b3a4] mb-1.5 font-poppins">
+                <label className="block text-xs uppercase tracking-wider font-semibold text-[#c4b1a6] mb-1.5 font-poppins">
                   Full Name
                 </label>
                 <input
@@ -88,7 +88,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider font-semibold text-[#a8b3a4] mb-1.5 font-poppins">
+                <label className="block text-xs uppercase tracking-wider font-semibold text-[#c4b1a6] mb-1.5 font-poppins">
                   Email Address
                 </label>
                 <input

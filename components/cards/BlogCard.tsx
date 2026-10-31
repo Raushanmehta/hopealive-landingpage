@@ -47,7 +47,7 @@ export const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(
           ref={setRefs}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="relative flex flex-col flex-1 bg-[#2e4412] rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-xl transition-all duration-500 ease-out select-none cursor-pointer border border-white/5 hover:border-white/10"
+          className="relative flex flex-col flex-1 bg-[#331600] rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-xl transition-all duration-500 ease-out select-none cursor-pointer border border-white/5 hover:border-white/10"
         >
           {/* Top card image container */}
           <div className="relative w-full h-[220px] sm:h-[240px] md:h-[250px] overflow-hidden">
@@ -59,14 +59,14 @@ export const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(
               className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             />
             {/* Natural subtle ambient vignette */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2e4412]/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#331600]/60 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Card content and metadata */}
           <div className="p-6 sm:p-7 lg:p-8 flex flex-col justify-between flex-1">
             <div>
               {/* Blog post publication date */}
-              <span className="font-poppins text-xs sm:text-[13px] text-[#8fa087] font-normal tracking-wide block">
+              <span className="font-poppins text-xs sm:text-[13px] text-[#a89488] font-normal tracking-wide block">
                 {post.date}
               </span>
 

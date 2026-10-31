@@ -168,7 +168,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
                   href={link.href}
                   className={`nav-link-item relative py-1 text-xs lg:text-[13px] font-poppins font-medium tracking-[0.08em] uppercase transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#ea580c] rounded-sm ${isActive
                     ? "text-[#ea580c] font-semibold"
-                    : "text-[#f0f4ee]/90 hover:text-white"
+                    : "text-[#fdf8f5]/90 hover:text-white"
                     }`}
                 >
                   {link.label}
@@ -227,7 +227,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`mobile-nav-item py-2 px-3 rounded-lg text-sm font-poppins font-medium tracking-wider uppercase transition-colors ${isActive
                     ? "bg-white/10 text-[#ea580c] font-semibold"
-                    : "text-[#f0f4ee]/90 hover:bg-white/5 hover:text-white"
+                    : "text-[#fdf8f5]/90 hover:bg-white/5 hover:text-white"
                     }`}
                 >
                   {link.label}
@@ -293,7 +293,7 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
               <Link
                 key={link.id}
                 href={link.href}
-                className="nav-link-item relative py-1 text-xs lg:text-[13px] font-poppins font-medium tracking-[0.08em] uppercase text-[#f0f4ee]/90 hover:text-white transition-colors duration-200 rounded-sm"
+                className="nav-link-item relative py-1 text-xs lg:text-[13px] font-poppins font-medium tracking-[0.08em] uppercase text-[#fdf8f5]/90 hover:text-white transition-colors duration-200 rounded-sm"
               >
                 {link.label}
               </Link>

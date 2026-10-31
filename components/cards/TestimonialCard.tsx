@@ -30,7 +30,7 @@ export const TestimonialCard = forwardRef<HTMLDivElement, TestimonialCardProps>(
     return (
       <div
         ref={ref}
-        className={`group relative flex flex-col justify-between h-full min-h-[230px] sm:min-h-[260px] ${cardBg} text-[#273813] rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl p-6 sm:p-7 lg:p-8 pt-5 sm:pt-6 shadow-xl border border-[#273813]/10 hover:border-[#ea580c] transition-all duration-300 ease-out select-none ${className}`}
+        className={`group relative flex flex-col justify-between h-full min-h-[230px] sm:min-h-[260px] ${cardBg} text-[#240f00] rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl p-6 sm:p-7 lg:p-8 pt-5 sm:pt-6 shadow-xl border border-[#240f00]/10 hover:border-[#ea580c] transition-all duration-300 ease-out select-none ${className}`}
       >
         {/* Top avatar and metadata */}
         <div className="flex items-center gap-4 sm:gap-5 -mt-16 sm:-mt-20">
@@ -69,10 +69,10 @@ export const TestimonialCard = forwardRef<HTMLDivElement, TestimonialCardProps>(
 
           {/* Member name and role */}
           <div className="pt-10 sm:pt-14 flex flex-col justify-center">
-            <h4 className="font-poppins font-bold text-xl sm:text-[22px] lg:text-2xl text-[#273813] leading-tight tracking-tight group-hover:text-[#ffffff] transition-colors">
+            <h4 className="font-poppins font-bold text-xl sm:text-[22px] lg:text-2xl text-[#240f00] leading-tight tracking-tight group-hover:text-[#ffffff] transition-colors">
               {cardItem.name}
             </h4>
-            <p className="font-poppins text-xs sm:text-[13px] font-semibold uppercase tracking-[0.15em] text-[#556350] mt-0.5">
+            <p className="font-poppins text-xs sm:text-[13px] font-semibold uppercase tracking-[0.15em] text-[#6b584c] mt-0.5">
               {cardItem.role}
             </p>
           </div>
@@ -80,7 +80,7 @@ export const TestimonialCard = forwardRef<HTMLDivElement, TestimonialCardProps>(
 
         {/* Testimonial quote text narrative */}
         <div className="mt-2 sm:mt-3 flex-1 flex flex-col justify-center">
-          <p className="font-poppins text-sm sm:text-[15px] text-[#2a3824] leading-relaxed tracking-normal">
+          <p className="font-poppins text-sm sm:text-[15px] text-[#3a1900] leading-relaxed tracking-normal">
             &ldquo;{cardItem.quote}&rdquo;
           </p>
         </div>

@@ -35,7 +35,7 @@ const DialogContent = React.forwardRef<
       <BaseDialog.Popup
         ref={ref}
         className={cn(
-          "relative w-full max-w-lg rounded-3xl bg-[#273813] border border-white/10 p-6 sm:p-8 text-white shadow-2xl transition-all duration-300 focus:outline-none",
+          "relative w-full max-w-lg rounded-3xl bg-[#240f00] border border-white/10 p-6 sm:p-8 text-white shadow-2xl transition-all duration-300 focus:outline-none",
           className
         )}
         {...props}
@@ -86,7 +86,7 @@ const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <BaseDialog.Description
     ref={ref}
-    className={cn("text-sm sm:text-base text-[#b0bfae] font-poppins leading-relaxed", className)}
+    className={cn("text-sm sm:text-base text-[#d6c4b8] font-poppins leading-relaxed", className)}
     {...props}
   />
 ));

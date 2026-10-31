@@ -40,7 +40,7 @@ export default function ProjectCard({
         <svg
           viewBox="0 0 340 500"
           preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full -z-10 text-[#273813] overflow-visible"
+          className="absolute inset-0 w-full h-full -z-10 text-[#240f00] overflow-visible"
         >
           {/* Silhouette leaf curve path */}
           <path
@@ -88,12 +88,12 @@ export default function ProjectCard({
             className="object-cover object-center w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 filter drop-shadow-[0_12px_22px_rgba(0,0,0,0.5)]"
           />
           {/* Ambient image gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#273813]/50 via-transparent to-[#273813]/25 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#240f00]/50 via-transparent to-[#240f00]/25 pointer-events-none" />
         </div>
 
         {/* Project short description text */}
         {currentItem.description && (
-          <p className="font-poppins text-xs sm:text-[13px] text-[#b0bfae] leading-relaxed line-clamp-2 px-6 sm:px-7 lg:px-8 text-center my-2 select-none">
+          <p className="font-poppins text-xs sm:text-[13px] text-[#d6c4b8] leading-relaxed line-clamp-2 px-6 sm:px-7 lg:px-8 text-center my-2 select-none">
             {currentItem.description}
           </p>
         )}
@@ -106,7 +106,7 @@ export default function ProjectCard({
             </span>
 
             {/* Action link arrow icon */}
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#273813] flex items-center justify-center shrink-0 shadow-md group-hover:bg-black transition-all duration-300">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#240f00] flex items-center justify-center shrink-0 shadow-md group-hover:bg-black transition-all duration-300">
               <ArrowUpRight
                 ref={arrowRef}
                 size={20}

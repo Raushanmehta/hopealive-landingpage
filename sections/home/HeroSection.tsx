@@ -40,7 +40,7 @@ export default function HeroSection({ data: propData, className }: SectionProps<
       ref={heroRef}
       id="hero"
       aria-label="Hero Section"
-      className={`relative min-h-[100svh] min-h-screen w-full overflow-hidden flex flex-col justify-end pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-10 sm:pb-14 lg:pb-20 bg-[#273813] px-4 md:px-12 ${className || ""}`}
+      className={`relative min-h-[100svh] min-h-screen w-full overflow-hidden flex flex-col justify-end pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-10 sm:pb-14 lg:pb-20 bg-[#240f00] px-4 md:px-12 ${className || ""}`}
     >
       {/* 1. Cinematic Background Image */}
       <div
@@ -57,13 +57,13 @@ export default function HeroSection({ data: propData, className }: SectionProps<
         />
 
         {/* Top navbar contrast vignette */}
-        <div className="absolute inset-x-0 top-0 h-40 sm:h-56 lg:h-64 bg-gradient-to-b from-[#10190d]/90 via-[#10190d]/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-40 sm:h-56 lg:h-64 bg-gradient-to-b from-[#1a0b00]/90 via-[#1a0b00]/40 to-transparent pointer-events-none" />
 
         {/* Ambient dark vignette tint */}
-        <div className="absolute inset-0 bg-[#0f170c]/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#1a0b00]/30 pointer-events-none" />
 
         {/* Bottom blend dark gradient */}
-        <div className="absolute inset-x-0 bottom-0 h-64 sm:h-80 lg:h-96 bg-gradient-to-t from-[#141f10] via-[#141f10]/60 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-64 sm:h-80 lg:h-96 bg-gradient-to-t from-[#1c0c00] via-[#1c0c00]/60 to-transparent pointer-events-none" />
       </div>
 
       {/* Main hero content container */}

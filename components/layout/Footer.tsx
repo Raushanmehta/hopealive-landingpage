@@ -70,7 +70,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
     return (
         <footer
             ref={footerRef}
-            className={`relative w-full bg-[#331600] text-[#b0bfae] overflow-hidden pt-12 sm:pt-16 lg:pt-16 pb-0 border-t border-white/5 px-4 md:px-12 ${className || ""}`}
+            className={`relative w-full bg-[#331600] text-[#d6c4b8] overflow-hidden pt-12 sm:pt-16 lg:pt-16 pb-0 border-t border-white/5 px-4 md:px-12 ${className || ""}`}
         >
             <div className="max-w-7xl mx-auto w-full">
                 {/* Upper footer content row */}
@@ -96,7 +96,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
 
                         <p
                             ref={descriptionRef}
-                            className="mt-4 sm:mt-5 max-w-sm sm:max-w-md text-sm sm:text-[15px] font-poppins text-[#a5b5a2] leading-relaxed"
+                            className="mt-4 sm:mt-5 max-w-sm sm:max-w-md text-sm sm:text-[15px] font-poppins text-[#c4b1a6] leading-relaxed"
                         >
                             {data.description}
                         </p>
@@ -124,7 +124,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                         {/* Copyright statement notice */}
                         <div
                             ref={copyrightRef}
-                            className="mt-6 sm:mt-10 text-[13px] sm:text-sm font-poppins text-[#6e806b] leading-relaxed select-none"
+                            className="mt-6 sm:mt-10 text-[13px] sm:text-sm font-poppins text-[#826f63] leading-relaxed select-none"
                         >
                             <p>{data.copyright.line1}</p>
                         </div>
@@ -145,7 +145,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                                 href={link.href}
                                                 onMouseEnter={(e) => animateFooterLinkHover(e.currentTarget)}
                                                 onMouseLeave={(e) => animateFooterLinkLeave(e.currentTarget)}
-                                                className="inline-block font-poppins text-xs sm:text-sm text-[#a1b099] hover:text-[#ea580c] transition-colors duration-200 py-0.5"
+                                                className="inline-block font-poppins text-xs sm:text-sm text-[#bda99e] hover:text-[#ea580c] transition-colors duration-200 py-0.5"
                                             >
                                                 {link.label}
                                             </Link>
@@ -167,7 +167,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                                     href={link.href}
                                                     onMouseEnter={(e) => animateFooterLinkHover(e.currentTarget)}
                                                     onMouseLeave={(e) => animateFooterLinkLeave(e.currentTarget)}
-                                                    className="inline-block font-poppins text-xs sm:text-sm text-[#a1b099] hover:text-[#ea580c] transition-colors duration-200 py-0.5"
+                                                    className="inline-block font-poppins text-xs sm:text-sm text-[#bda99e] hover:text-[#ea580c] transition-colors duration-200 py-0.5"
                                                 >
                                                     {link.label}
                                                 </Link>
@@ -183,13 +183,13 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                                     <h3 className="font-poppins uppercase tracking-[0.16em] text-sm sm:text-[18px] font-semibold text-[#ea580c] mb-4 sm:mb-5">
                                         {data.locationSection.title}
                                     </h3>
-                                    <div className="space-y-1 text-xs sm:text-sm font-poppins text-[#a1b099] leading-relaxed">
+                                    <div className="space-y-1 text-xs sm:text-sm font-poppins text-[#bda99e] leading-relaxed">
                                         {data.locationSection.addressLines.map((line) => (
                                             <p key={line}>{line}</p>
                                         ))}
                                     </div>
 
-                                    <div className="mt-2 sm:mt-2 space-y-1.5 text-xs sm:text-sm font-poppins text-[#a1b099]">
+                                    <div className="mt-2 sm:mt-2 space-y-1.5 text-xs sm:text-sm font-poppins text-[#bda99e]">
                                         {data.locationSection.phones.map((phone) => (
                                             <p key={phone}>
                                                 <a

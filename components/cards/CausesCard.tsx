@@ -125,7 +125,7 @@ export const CausesCard = forwardRef<HTMLDivElement, CausesCardProps>(
         }}
         className={`group relative flex flex-col justify-between min-h-[390px] sm:min-h-[420px] p-8 sm:p-9 lg:p-10 rounded-tl-[54px] sm:rounded-tl-[64px] rounded-br-[54px] sm:rounded-br-[64px] rounded-tr-2xl rounded-bl-2xl shadow-xl transition-all duration-500 ease-out cursor-pointer select-none ${isActive
             ? "bg-[#ea580c] text-[#ffffff] scale-[1.01] shadow-2xl shadow-[#ea580c]/15"
-            : "bg-[#331600] text-white border border-white/10 hover:border-white/25 hover:bg-[#25361c]"
+            : "bg-[#331600] text-white border border-white/10 hover:border-white/25 hover:bg-[#401c00]"
           } ${className}`}
       >
         {/* Card header title icon */}
@@ -147,7 +147,7 @@ export const CausesCard = forwardRef<HTMLDivElement, CausesCardProps>(
           <p
             className={`font-poppins text-sm sm:text-[15px] leading-relaxed transition-colors duration-300 ${isActive
                 ? "text-[#ffffff]/90 font-medium"
-                : "text-[#a8b3a4] font-normal"
+                : "text-[#c4b1a6] font-normal"
               }`}
           >
             {cardData.description}

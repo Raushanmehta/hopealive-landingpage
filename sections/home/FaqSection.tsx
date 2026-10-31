@@ -61,7 +61,7 @@ export default function FaqSection({
       ref={sectionRef}
       id="faqs"
       aria-label="HopeAlive Foundation Frequently Asked Questions"
-      className="relative w-full bg-[#f8f6f0] text-[#273813] px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
+      className="relative w-full bg-[#f8f6f0] text-[#240f00] px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header content grid layout */}
@@ -72,7 +72,7 @@ export default function FaqSection({
               ref={badgeRef}
               className="inline-flex flex-col items-start w-fit select-none"
             >
-              <span className="text-sm lg:text-lg font-poppins font-medium text-[#273813]">
+              <span className="text-sm lg:text-lg font-poppins font-medium text-[#240f00]">
                 {data.badge.text}
               </span>
               <svg
@@ -100,7 +100,7 @@ export default function FaqSection({
           {/* Right headline and narrative */}
           <div className="lg:col-span-8 flex flex-col">
             {/* Section main heading title */}
-            <h2 className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl text-[#273813] tracking-tight leading-[1.12] select-none">
+            <h2 className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl text-[#240f00] tracking-tight leading-[1.12] select-none">
               <span className="block">{data.headline.line1}</span>
               {data.headline.line2 && (
                 <span className="block">{data.headline.line2}</span>
@@ -108,7 +108,7 @@ export default function FaqSection({
             </h2>
 
             {/* Description narrative paragraph text */}
-            <p className="mt-3 sm:mt-4 max-w-3xl font-poppins text-sm sm:text-base text-[#556350] leading-relaxed select-none">
+            <p className="mt-3 sm:mt-4 max-w-3xl font-poppins text-sm sm:text-base text-[#6b584c] leading-relaxed select-none">
               {data.description}
             </p>
           </div>
@@ -124,7 +124,7 @@ export default function FaqSection({
                 key={item.id}
                 className={`overflow-hidden rounded-tl-[40px] rounded-br-[40px] rounded-tr-none rounded-bl-none bg-white transition-all duration-300 border ${isOpen
                   ? "border-[#331600] shadow-lg shadow-black/[0.04]"
-                  : "border-[#273813]/10 shadow-sm hover:border-[#273813]/25"
+                  : "border-[#240f00]/10 shadow-sm hover:border-[#240f00]/25"
                   }`}
               >
                 <button
@@ -137,12 +137,12 @@ export default function FaqSection({
                     <span
                       className={`shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors duration-200 ${isOpen
                         ? "bg-[#331600] text-[#ea580c]"
-                        : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#331600] group-hover:text-[#ea580c]"
+                        : "bg-[#f8f6f0] text-[#240f00] group-hover:bg-[#331600] group-hover:text-[#ea580c]"
                         }`}
                     >
                       <HelpCircle size={18} strokeWidth={2.2} />
                     </span>
-                    <h3 className="font-poppins font-bold text-base sm:text-lg lg:text-xl text-[#273813] leading-snug group-hover:text-[#2d5a27] transition-colors">
+                    <h3 className="font-poppins font-bold text-base sm:text-lg lg:text-xl text-[#240f00] leading-snug group-hover:text-[#ea580c] transition-colors">
                       {item.question}
                     </h3>
                   </div>
@@ -150,7 +150,7 @@ export default function FaqSection({
                   <span
                     className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-transform duration-300 ${isOpen
                       ? "rotate-180 bg-[#331600] text-[#ea580c]"
-                      : "bg-[#f8f6f0] text-[#273813] group-hover:bg-[#331600]/10"
+                      : "bg-[#f8f6f0] text-[#240f00] group-hover:bg-[#331600]/10"
                       }`}
                   >
                     <ChevronDown size={18} strokeWidth={2.4} />
@@ -167,13 +167,13 @@ export default function FaqSection({
                   }}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-5 sm:px-7 pb-6 sm:pb-7 pt-1 border-t border-[#273813]/5">
-                      <p className="font-poppins text-sm sm:text-[15px] text-[#556350] leading-relaxed">
+                    <div className="px-5 sm:px-7 pb-6 sm:pb-7 pt-1 border-t border-[#240f00]/5">
+                      <p className="font-poppins text-sm sm:text-[15px] text-[#6b584c] leading-relaxed">
                         {item.answer}
                       </p>
                       {item.category && (
-                        <div className="mt-3.5 inline-flex items-center gap-1.5 text-xs font-poppins font-semibold uppercase tracking-wider text-[#273813]/60 bg-[#f8f6f0] px-3 py-1 rounded-md">
-                          <CheckCircle2 size={13} className="text-[#2d5a27]" />
+                        <div className="mt-3.5 inline-flex items-center gap-1.5 text-xs font-poppins font-semibold uppercase tracking-wider text-[#240f00]/60 bg-[#f8f6f0] px-3 py-1 rounded-md">
+                          <CheckCircle2 size={13} className="text-[#ea580c]" />
                           <span>Topic: {item.category}</span>
                         </div>
                       )}
@@ -192,7 +192,7 @@ export default function FaqSection({
               <h3 className="font-poppins font-bold text-2xl sm:text-3xl text-white tracking-tight">
                 {data.cta.title}
               </h3>
-              <p className="mt-2 font-poppins text-sm sm:text-base text-[#a8b3a4] max-w-xl leading-relaxed">
+              <p className="mt-2 font-poppins text-sm sm:text-base text-[#c4b1a6] max-w-xl leading-relaxed">
                 {data.cta.description}
               </p>
             </div>
