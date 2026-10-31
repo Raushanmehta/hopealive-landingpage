@@ -34,9 +34,19 @@ export function ModalProvider({ children }: { children: ReactNode }) {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const openModal = (customTitle?: string, customDesc?: string) => {
-    if (customTitle) setTitle(customTitle);
-    if (customDesc) setDescription(customDesc);
+  const openModal = (customTitle?: string | unknown, customDesc?: string | unknown) => {
+    if (typeof customTitle === "string" && customTitle.trim()) {
+      setTitle(customTitle);
+    } else {
+      setTitle("Join Our Mission");
+    }
+    if (typeof customDesc === "string" && customDesc.trim()) {
+      setDescription(customDesc);
+    } else {
+      setDescription(
+        "Become part of the movement. Share your time, skills, or resources to uplift communities in need."
+      );
+    }
     setSubmitted(false);
     setIsOpen(true);
   };
