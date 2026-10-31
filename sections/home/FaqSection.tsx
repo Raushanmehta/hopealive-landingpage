@@ -200,7 +200,7 @@ export default function FaqSection({
 
             <button
               type="button"
-              onClick={openModal}
+              onClick={() => openModal(data.cta?.title || "Get in Touch With Us", data.cta?.description || "Our team is here to answer your questions and help you get involved.")}
               className="btn-leaf inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 bg-[#ea580c] text-[#ffffff] font-poppins font-semibold text-sm sm:text-[15px] tracking-wide rounded-xl shadow-lg hover:bg-white hover:text-[#ea580c] active:scale-[0.98] transition-all duration-200 cursor-pointer shrink-0 select-none border border-transparent hover:border-[#ea580c]/20"
             >
               <span>{data.cta.buttonText}</span>
