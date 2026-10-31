@@ -81,7 +81,7 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                             <BrandLogoIcon
                                 size={36}
                                 color="#ea580c"
-                                className="drop-shadow-[0_0_12px_rgba(254,255,2,0.6)] shrink-0 transition-transform duration-300 hover:rotate-12 sm:w-10 sm:h-10"
+                                className="drop-shadow-[0_0_12px_rgba(234,88,12,0.6)] shrink-0 transition-transform duration-300 hover:rotate-12 sm:w-10 sm:h-10"
                             />
                             <Link href="/" className="inline-flex items-center select-none">
                                 <Image
