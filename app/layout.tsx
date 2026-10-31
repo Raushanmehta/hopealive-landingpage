@@ -3,7 +3,7 @@ import { Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { ModalProvider } from "@/components/common/ActionModal";
+import { ModalProvider } from "@/components/common/ContactModal";
 
 const poppins = Poppins({
   variable: "--font-poppins",

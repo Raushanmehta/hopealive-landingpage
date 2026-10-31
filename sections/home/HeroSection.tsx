@@ -6,7 +6,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ArrowUpRight } from "lucide-react";
 import { site, SectionProps, HeroData } from "@/data";
-import { useAppModal } from "@/components/common/ActionModal";
+import { useAppModal } from "@/components/common/ContactModal";
 import {
   animateHeroEntrance,
   animateHeroButtonHover,

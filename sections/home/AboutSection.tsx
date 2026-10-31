@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
 import { site, SectionProps, AboutData } from "@/data";
-import { useAppModal } from "@/components/common/ActionModal";
+import { useAppModal } from "@/components/common/ContactModal";
 import {
   animateAboutEntrance,
   animateAboutButtonHover,

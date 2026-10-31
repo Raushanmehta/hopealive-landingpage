@@ -17,7 +17,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import SunburstIcon from "@/components/icons/SunburstIcon";
 import BrandLogoIcon from "@/components/icons/BrandLogoIcon";
 import { site, SectionProps, NavbarData, NavItem } from "@/data";
-import { useAppModal } from "@/components/common/ActionModal";
+import { useAppModal } from "@/components/common/ContactModal";
 
 interface NavbarProps {
   data?: NavbarData;

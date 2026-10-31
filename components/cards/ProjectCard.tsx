@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { ProjectItem } from "@/types";
-import { useAppModal } from "@/components/common/ActionModal";
+import { useAppModal } from "@/components/common/ContactModal";
 
 interface ProjectCardProps {
   item?: ProjectItem;

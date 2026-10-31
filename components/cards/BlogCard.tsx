@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { BlogPostItem } from "@/types";
 import { animateBlogCardHover, animateBlogCardLeave } from "@/util/animations";
-import { useAppModal } from "@/components/common/ActionModal";
+import { useAppModal } from "@/components/common/ContactModal";
 
 interface BlogCardProps {
   post: BlogPostItem;

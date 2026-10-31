@@ -2,7 +2,7 @@
 
 import React, { forwardRef } from "react";
 import { CauseItem } from "@/types";
-import { useAppModal } from "@/components/common/ActionModal";
+import { useAppModal } from "@/components/common/ContactModal";
 import {
   NutritionIcon,
   EducationIcon,
