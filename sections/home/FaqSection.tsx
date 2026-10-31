@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronDown, ArrowUpRight, HelpCircle, CheckCircle2 } from "lucide-react";
 import { site, SectionProps, FaqsData, FaqItem } from "@/data";
-import { useAppModal } from "@/context/ModalContext";
+import { useAppModal } from "@/components/common/ContactModal";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
