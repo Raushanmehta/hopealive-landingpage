@@ -61,6 +61,7 @@ export default function CausesSection({
   return (
     <section
       ref={sectionRef}
+      id="causes"
       aria-label="High-Impact NGO Programs and Causes"
       className="relative w-full bg-[#162211] text-white px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden border-t border-white/5"
     >

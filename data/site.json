@@ -55,7 +55,7 @@
               {
                 "id": "nav-home",
                 "label": "Home",
-                "href": "/"
+                "href": "#hero"
               },
               {
                 "id": "nav-about",
@@ -76,6 +76,11 @@
                 "id": "nav-testimonials",
                 "label": "Testimonials",
                 "href": "#testimonials"
+              },
+              {
+                "id": "nav-blog",
+                "label": "Blog",
+                "href": "#blog"
               },
               {
                 "id": "nav-faqs",

@@ -57,6 +57,7 @@ export default function ProjectSection({
   return (
     <section
       ref={sectionRef}
+      id="projects"
       aria-label="HopeAlive Foundation Key Impact Projects"
       className="relative w-full bg-[#f8f6f0] text-[#1a2614] px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
     >

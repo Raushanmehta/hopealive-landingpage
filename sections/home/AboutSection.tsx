@@ -117,6 +117,7 @@ export default function AboutSection({
   return (
     <section
       ref={sectionRef}
+      id="about"
       aria-label="About HopeAlive Foundation"
       className="relative w-full bg-[#f8f6f0] text-[#1a2614]  px-4 md:px-12 py-8 md:py-10 lg:py-20 overflow-hidden"
     >

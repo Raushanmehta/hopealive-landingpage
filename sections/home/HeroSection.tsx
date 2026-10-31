@@ -38,6 +38,7 @@ export default function HeroSection({ data: propData, className }: SectionProps<
   return (
     <section
       ref={heroRef}
+      id="hero"
       aria-label="Hero Section"
       className={`relative min-h-[100svh] min-h-screen w-full overflow-hidden flex flex-col justify-end pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-10 sm:pb-14 lg:pb-20 bg-[#162211] px-4 md:px-12 ${className || ""}`}
     >
