@@ -2,6 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { site, SectionProps, CausesData, CauseItem } from "@/data";
 import { animateCausesEntrance } from "@/util/animations";
 import CausesCard from "@/components/cards/CausesCard";
@@ -18,6 +25,27 @@ export default function CausesSection({
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const ctaButtonRef = useRef<HTMLAnchorElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const [api, setApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const updateScrollState = () => {
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
+    };
+
+    updateScrollState();
+    api.on("select", updateScrollState);
+    api.on("reInit", updateScrollState);
+
+    return () => {
+      api.off("select", updateScrollState);
+    };
+  }, [api]);
 
   // Active card item on hover/select (default null: koi card pehle se active nahi rahega)
   const [activeCardId, setActiveCardId] = useState<string | null>(null);
@@ -99,12 +127,12 @@ export default function CausesSection({
             </div>
           </div>
 
-          {/* Right headline and narrative */}
+          {/* Right headline and controls */}
           <div className="lg:col-span-8 flex flex-col">
             {/* Section main heading title */}
             <h2
               ref={headlineRef}
-              className="font-poppins font-bold  text-3xl sm:text-5xl md:text-5xl text-white tracking-tight leading-[1.12] select-none"
+              className="font-poppins font-bold text-3xl sm:text-5xl md:text-5xl text-white tracking-tight leading-[1.12] select-none"
             >
               <span className="causes-headline-line block">
                 {data.headline.line1}
@@ -123,26 +151,64 @@ export default function CausesSection({
             >
               {data.description}
             </p>
+
+            {/* Carousel navigation controls */}
+            <div className="mt-3 sm:mt-4 flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => api?.scrollPrev()}
+                disabled={!canScrollPrev}
+                aria-label="Previous causes"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#1f2c16] text-[#feff02] border border-white/10 hover:bg-[#feff02] hover:text-[#121a0d] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+              >
+                <ArrowLeft size={18} strokeWidth={2.4} />
+              </button>
+              <button
+                type="button"
+                onClick={() => api?.scrollNext()}
+                disabled={!canScrollNext}
+                aria-label="Next causes"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#1f2c16] text-[#feff02] border border-white/10 hover:bg-[#feff02] hover:text-[#121a0d] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+              >
+                <ArrowRight size={18} strokeWidth={2.4} />
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Feature cause cards grid */}
-        <div
-          className="mt-4 sm:mt-6 lg:mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 items-stretch"
-          onMouseLeave={() => setActiveCardId(null)}
-        >
-          {data.items.slice(0, 3).map((item: CauseItem, index: number) => (
-            <CausesCard
-              key={item.id}
-              ref={(el) => {
-                cardRefs.current[index] = el;
-              }}
-              item={item}
-              isActive={activeCardId === item.id}
-              onSelect={() => setActiveCardId(item.id)}
-              onLeave={() => setActiveCardId(null)}
-            />
-          ))}
+        {/* Causes Carousel */}
+        <div className="w-full mt-6 sm:mt-8">
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full relative"
+          >
+            <CarouselContent
+              className="-ml-4 sm:-ml-5 pb-4"
+              onMouseLeave={() => setActiveCardId(null)}
+            >
+              {data.items.map((item: CauseItem, index: number) => (
+                <CarouselItem
+                  key={item.id}
+                  className="pl-4 sm:pl-5 basis-full md:basis-1/2 lg:basis-1/3 flex"
+                >
+                  <CausesCard
+                    ref={(el) => {
+                      cardRefs.current[index] = el;
+                    }}
+                    item={item}
+                    isActive={activeCardId === item.id}
+                    onSelect={() => setActiveCardId(item.id)}
+                    onLeave={() => setActiveCardId(null)}
+                    className="w-full h-full"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </section>

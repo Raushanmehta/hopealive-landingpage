@@ -1,7 +1,14 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { site, SectionProps, ProjectsData, ProjectItem } from "@/data";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { animateProjectEntrance } from "@/util/animations";
@@ -17,6 +24,27 @@ export default function ProjectSection({
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const [api, setApi] = useState<CarouselApi>();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const updateScrollState = () => {
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
+    };
+
+    updateScrollState();
+    api.on("select", updateScrollState);
+    api.on("reInit", updateScrollState);
+
+    return () => {
+      api.off("select", updateScrollState);
+    };
+  }, [api]);
 
   // GSAP Entrance Animation on scroll
   useEffect(() => {
@@ -53,6 +81,8 @@ export default function ProjectSection({
 
     return () => ctx.revert();
   }, []);
+
+  const projects = data.projectsList || (data as any).items || [];
 
   return (
     <section
@@ -95,7 +125,7 @@ export default function ProjectSection({
             </div>
           </div>
 
-          {/* Right headline and narrative */}
+          {/* Right headline and controls */}
           <div className="lg:col-span-8 flex flex-col">
             <h2
               ref={headlineRef}
@@ -117,22 +147,59 @@ export default function ProjectSection({
             >
               {data.description}
             </p>
+
+            {/* Carousel navigation controls */}
+            <div className="mt-3 sm:mt-4 flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => api?.scrollPrev()}
+                disabled={!canScrollPrev}
+                aria-label="Previous projects"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#1f2c16] text-[#feff02] border border-black/10 hover:bg-[#162211] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+              >
+                <ArrowLeft size={18} strokeWidth={2.4} />
+              </button>
+              <button
+                type="button"
+                onClick={() => api?.scrollNext()}
+                disabled={!canScrollNext}
+                aria-label="Next projects"
+                className="btn-leaf flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#1f2c16] text-[#feff02] border border-black/10 hover:bg-[#162211] disabled:opacity-30 disabled:pointer-events-none active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+              >
+                <ArrowRight size={18} strokeWidth={2.4} />
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Feature project cards grid */}
-        <div className="mt-4 sm:mt-6 lg:mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-5 items-stretch">
-          {(data.projectsList || (data as any).items || []).slice(0, 3).map((item: ProjectItem, index: number) => (
-            <div
-              key={item.id}
-              ref={(el) => {
-                cardRefs.current[index] = el;
-              }}
-              className="h-full"
-            >
-              <ProjectCard item={item} />
-            </div>
-          ))}
+        {/* Feature project cards carousel */}
+        <div className="w-full mt-6 sm:mt-8">
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full relative"
+          >
+            <CarouselContent className="-ml-4 sm:-ml-5 pb-6">
+              {projects.map((item: ProjectItem, index: number) => (
+                <CarouselItem
+                  key={item.id}
+                  className="pl-4 sm:pl-5 basis-full md:basis-1/2 lg:basis-1/3 flex"
+                >
+                  <div
+                    ref={(el) => {
+                      cardRefs.current[index] = el;
+                    }}
+                    className="w-full h-full"
+                  >
+                    <ProjectCard item={item} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </section>
