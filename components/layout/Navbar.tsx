@@ -137,7 +137,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
               <BrandLogoIcon
                 size={34}
                 color="#ea580c"
-                className="drop-shadow-[0_0_10px_rgba(254,255,2,0.6)]"
+                className="drop-shadow-[0_0_10px_rgba(234,88,12,0.6)]"
               />
             </span>
             <span
@@ -269,10 +269,10 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
             className="flex items-center gap-2.5 group select-none focus:outline-none rounded-lg shrink-0"
           >
             <span className="inline-flex items-center justify-center shrink-0">
-              <SunburstIcon
+              <BrandLogoIcon
                 size={34}
                 color="#ea580c"
-                className="drop-shadow-[0_0_10px_rgba(254,255,2,0.6)]"
+                className="drop-shadow-[0_0_10px_rgba(234,88,12,0.6)]"
               />
             </span>
             <span className="inline-flex items-center select-none">
