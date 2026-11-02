@@ -45,7 +45,7 @@
             "brand": {
               "name": "HopeAlive",
               "href": "/",
-              "logo": "/logo/logo.webp"
+              "logo": "/logo/logo-alive.webp"
             },
             "links": [
               {
@@ -397,7 +397,7 @@
       "footer": {
         "variants": {
           "HopeAliveFooter1": {
-            "logo": "/logo/logo.webp",
+            "logo": "/logo/logo-alive.webp",
             "headline": {
               "line1": "HopeAlive"
             },

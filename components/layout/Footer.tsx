@@ -11,7 +11,6 @@ import {
     LinkedinIcon,
 } from "@/components/icons/SocialIcons";
 import SunburstIcon from "@/components/icons/SunburstIcon";
-import BrandLogoIcon from "@/components/icons/BrandLogoIcon";
 import { site, SectionProps, FooterData } from "@/data";
 import { SocialLink } from "@/types";
 import {
@@ -78,18 +77,13 @@ export default function Footer({ data: propData, className }: SectionProps<Foote
                     {/* Left company information column */}
                     <div className="lg:col-span-5 xl:col-span-5">
                         <div ref={headlineRef} className="flex items-center gap-3 sm:gap-3.5">
-                            <BrandLogoIcon
-                                size={36}
-                                color="#ea580c"
-                                className="drop-shadow-[0_0_12px_rgba(234,88,12,0.6)] shrink-0 transition-transform duration-300 hover:scale-105 sm:w-10 sm:h-10"
-                            />
                             <Link href="/" className="inline-flex items-center select-none">
                                 <Image
                                     src={data.logo || "/logo/logo.webp"}
                                     alt={data.headline?.line1 || "HopeAlive"}
                                     width={240}
                                     height={75}
-                                    className="h-10 sm:h-14 w-auto object-contain select-none"
+                                    className="h-10 sm:h-12 w-auto object-contain select-none"
                                 />
                             </Link>
                         </div>

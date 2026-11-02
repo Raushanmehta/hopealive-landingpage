@@ -14,8 +14,6 @@ import {
   animateNavbarScroll,
 } from "@/util/animations";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import SunburstIcon from "@/components/icons/SunburstIcon";
-import BrandLogoIcon from "@/components/icons/BrandLogoIcon";
 import { site, SectionProps, NavbarData, NavItem } from "@/data";
 import { useAppModal } from "@/components/common/ContactModal";
 
@@ -139,19 +137,8 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
           {/* Left brand logo component */}
           <Link
             href={data.brand.href}
-            onMouseEnter={handleLogoMouseEnter}
             className="flex items-center gap-2.5 group select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ea580c] rounded-lg shrink-0"
           >
-            <span
-              ref={logoIconRef}
-              className="inline-flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shrink-0"
-            >
-              <BrandLogoIcon
-                size={34}
-                color="#ea580c"
-                className="drop-shadow-[0_0_10px_rgba(234,88,12,0.6)]"
-              />
-            </span>
             <span
               ref={logoTextRef}
               className="inline-flex items-center select-none"
@@ -162,7 +149,7 @@ function NavbarContent({ data = site.navbar }: NavbarProps) {
                 width={240}
                 height={75}
                 priority
-                className="h-10  sm:h-14 w-auto object-contain select-none"
+                className="h-10  sm:h-12 w-auto object-contain select-none"
               />
             </span>
           </Link>
@@ -282,13 +269,6 @@ export function NavbarFallback({ data = site.navbar }: NavbarProps) {
             href={data.brand.href}
             className="flex items-center gap-2.5 group select-none focus:outline-none rounded-lg shrink-0"
           >
-            <span className="inline-flex items-center justify-center shrink-0">
-              <BrandLogoIcon
-                size={34}
-                color="#ea580c"
-                className="drop-shadow-[0_0_10px_rgba(234,88,12,0.6)]"
-              />
-            </span>
             <span className="inline-flex items-center select-none">
               <Image
                 src={data.brand.logo || "/logo/logo.webp"}
